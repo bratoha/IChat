@@ -10,11 +10,11 @@ import UIKit
 extension UIFont {
     
     static func avenir20() -> UIFont? {
-        return UIFont.init(name: "avinir", size: 20)
+        return UIFont.init(name: "Avenir", size: 20)
     }
     
     static func avenir26() -> UIFont? {
-        return UIFont.init(name: "avinir", size: 20)
+        return UIFont.init(name: "Avenir", size: 26)
     }
     
     

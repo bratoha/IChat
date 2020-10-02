@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		875F118625274EC300101D0D /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875F118525274EC300101D0D /* SignUpViewController.swift */; };
+		875F1189252750A400101D0D /* OneLineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875F1188252750A400101D0D /* OneLineTextField.swift */; };
 		8773467525272D0600A11276 /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8773467025272D0600A11276 /* UILabel+Extension.swift */; };
 		8773467625272D0600A11276 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8773467125272D0600A11276 /* UIButton+Extension.swift */; };
 		8773467725272D0600A11276 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8773467225272D0600A11276 /* UIFont+Extension.swift */; };
@@ -22,6 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		875F118525274EC300101D0D /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		875F1188252750A400101D0D /* OneLineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneLineTextField.swift; sourceTree = "<group>"; };
 		8773467025272D0600A11276 /* UILabel+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
 		8773467125272D0600A11276 /* UIButton+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
 		8773467225272D0600A11276 /* UIFont+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
@@ -65,6 +69,7 @@
 		8773467C2527447500A11276 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				875F1188252750A400101D0D /* OneLineTextField.swift */,
 				8773467E2527457100A11276 /* ButtonFormView.swift */,
 				8773466D25272C7D00A11276 /* UIKit */,
 			);
@@ -97,6 +102,7 @@
 				87EB3F0C2512370E001BB298 /* Assets.xcassets */,
 				87EB3F0E2512370E001BB298 /* LaunchScreen.storyboard */,
 				87EB3F112512370E001BB298 /* Info.plist */,
+				875F118525274EC300101D0D /* SignUpViewController.swift */,
 			);
 			path = IChat;
 			sourceTree = "<group>";
@@ -170,6 +176,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				875F1189252750A400101D0D /* OneLineTextField.swift in Sources */,
+				875F118625274EC300101D0D /* SignUpViewController.swift in Sources */,
 				8773467825272D0600A11276 /* UIColor+Extension.swift in Sources */,
 				8773467725272D0600A11276 /* UIFont+Extension.swift in Sources */,
 				8773467925272D0600A11276 /* UIImageView+Extension.swift in Sources */,
