@@ -12,6 +12,8 @@
 		8773467725272D0600A11276 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8773467225272D0600A11276 /* UIFont+Extension.swift */; };
 		8773467825272D0600A11276 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8773467325272D0600A11276 /* UIColor+Extension.swift */; };
 		8773467925272D0600A11276 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8773467425272D0600A11276 /* UIImageView+Extension.swift */; };
+		8773467F2527457100A11276 /* ButtonFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8773467E2527457100A11276 /* ButtonFormView.swift */; };
+		87734682252748A700A11276 /* UIStackView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87734681252748A700A11276 /* UIStackView+Extension.swift */; };
 		87EB3F042512370D001BB298 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EB3F032512370D001BB298 /* AppDelegate.swift */; };
 		87EB3F062512370D001BB298 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EB3F052512370D001BB298 /* SceneDelegate.swift */; };
 		87EB3F082512370D001BB298 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EB3F072512370D001BB298 /* AuthViewController.swift */; };
@@ -25,6 +27,8 @@
 		8773467225272D0600A11276 /* UIFont+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
 		8773467325272D0600A11276 /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		8773467425272D0600A11276 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
+		8773467E2527457100A11276 /* ButtonFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonFormView.swift; sourceTree = "<group>"; };
+		87734681252748A700A11276 /* UIStackView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Extension.swift"; sourceTree = "<group>"; };
 		87EB3F002512370D001BB298 /* IChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		87EB3F032512370D001BB298 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		87EB3F052512370D001BB298 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,7 +49,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		8773466D25272C7D00A11276 /* Extensions */ = {
+		8773466D25272C7D00A11276 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
 				8773467125272D0600A11276 /* UIButton+Extension.swift */,
@@ -53,6 +57,16 @@
 				8773467225272D0600A11276 /* UIFont+Extension.swift */,
 				8773467425272D0600A11276 /* UIImageView+Extension.swift */,
 				8773467025272D0600A11276 /* UILabel+Extension.swift */,
+				87734681252748A700A11276 /* UIStackView+Extension.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		8773467C2527447500A11276 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8773467E2527457100A11276 /* ButtonFormView.swift */,
+				8773466D25272C7D00A11276 /* UIKit */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -76,7 +90,7 @@
 		87EB3F022512370D001BB298 /* IChat */ = {
 			isa = PBXGroup;
 			children = (
-				8773466D25272C7D00A11276 /* Extensions */,
+				8773467C2527447500A11276 /* Extensions */,
 				87EB3F032512370D001BB298 /* AppDelegate.swift */,
 				87EB3F052512370D001BB298 /* SceneDelegate.swift */,
 				87EB3F072512370D001BB298 /* AuthViewController.swift */,
@@ -159,6 +173,8 @@
 				8773467825272D0600A11276 /* UIColor+Extension.swift in Sources */,
 				8773467725272D0600A11276 /* UIFont+Extension.swift in Sources */,
 				8773467925272D0600A11276 /* UIImageView+Extension.swift in Sources */,
+				87734682252748A700A11276 /* UIStackView+Extension.swift in Sources */,
+				8773467F2527457100A11276 /* ButtonFormView.swift in Sources */,
 				8773467525272D0600A11276 /* UILabel+Extension.swift in Sources */,
 				87EB3F082512370D001BB298 /* AuthViewController.swift in Sources */,
 				87EB3F042512370D001BB298 /* AppDelegate.swift in Sources */,
