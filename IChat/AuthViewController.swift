@@ -58,10 +58,7 @@ import SwiftUI
 struct AuthViewControllerProvider: PreviewProvider {
     
     static var previews: some View {
-        Group {
-            ContainerView().edgesIgnoringSafeArea(.all)
-            ContainerView().edgesIgnoringSafeArea(.all)
-        }
+        ContainerView().edgesIgnoringSafeArea(.all)
     }
     
     struct ContainerView: UIViewControllerRepresentable {
