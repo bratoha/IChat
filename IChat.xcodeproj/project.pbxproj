@@ -16,6 +16,7 @@
 		8773467925272D0600A11276 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8773467425272D0600A11276 /* UIImageView+Extension.swift */; };
 		8773467F2527457100A11276 /* ButtonFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8773467E2527457100A11276 /* ButtonFormView.swift */; };
 		87734682252748A700A11276 /* UIStackView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87734681252748A700A11276 /* UIStackView+Extension.swift */; };
+		878546A8252C89FD005E4585 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878546A7252C89FD005E4585 /* LoginViewController.swift */; };
 		87EB3F042512370D001BB298 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EB3F032512370D001BB298 /* AppDelegate.swift */; };
 		87EB3F062512370D001BB298 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EB3F052512370D001BB298 /* SceneDelegate.swift */; };
 		87EB3F082512370D001BB298 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EB3F072512370D001BB298 /* AuthViewController.swift */; };
@@ -33,6 +34,7 @@
 		8773467425272D0600A11276 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		8773467E2527457100A11276 /* ButtonFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonFormView.swift; sourceTree = "<group>"; };
 		87734681252748A700A11276 /* UIStackView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Extension.swift"; sourceTree = "<group>"; };
+		878546A7252C89FD005E4585 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		87EB3F002512370D001BB298 /* IChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		87EB3F032512370D001BB298 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		87EB3F052512370D001BB298 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 				87EB3F0E2512370E001BB298 /* LaunchScreen.storyboard */,
 				87EB3F112512370E001BB298 /* Info.plist */,
 				875F118525274EC300101D0D /* SignUpViewController.swift */,
+				878546A7252C89FD005E4585 /* LoginViewController.swift */,
 			);
 			path = IChat;
 			sourceTree = "<group>";
@@ -187,6 +190,7 @@
 				87EB3F082512370D001BB298 /* AuthViewController.swift in Sources */,
 				87EB3F042512370D001BB298 /* AppDelegate.swift in Sources */,
 				8773467625272D0600A11276 /* UIButton+Extension.swift in Sources */,
+				878546A8252C89FD005E4585 /* LoginViewController.swift in Sources */,
 				87EB3F062512370D001BB298 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
