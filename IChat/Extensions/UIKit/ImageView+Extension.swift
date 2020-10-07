@@ -1,5 +1,5 @@
 //
-//  UIImageView+Extension.swift
+//  ImageView+Extension.swift
 //  IChat
 //
 //  Created by Антон Калинин on 02.10.2020.
