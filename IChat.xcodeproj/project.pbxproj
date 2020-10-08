@@ -20,6 +20,9 @@
 		878546A8252C89FD005E4585 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878546A7252C89FD005E4585 /* LoginViewController.swift */; };
 		87CD3A58252DE9E9001275E8 /* SetupProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87CD3A57252DE9E9001275E8 /* SetupProfileViewController.swift */; };
 		87CD3A5B252DEC27001275E8 /* AddPhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87CD3A5A252DEC27001275E8 /* AddPhotoView.swift */; };
+		87D5C58A252F11E2009B5A01 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D5C589252F11E2009B5A01 /* MainTabBarController.swift */; };
+		87D5C58E252F11FC009B5A01 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D5C58D252F11FC009B5A01 /* ListViewController.swift */; };
+		87D5C591252F1208009B5A01 /* PeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D5C590252F1208009B5A01 /* PeopleViewController.swift */; };
 		87EB3F042512370D001BB298 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EB3F032512370D001BB298 /* AppDelegate.swift */; };
 		87EB3F062512370D001BB298 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EB3F052512370D001BB298 /* SceneDelegate.swift */; };
 		87EB3F082512370D001BB298 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EB3F072512370D001BB298 /* AuthViewController.swift */; };
@@ -41,6 +44,9 @@
 		878546A7252C89FD005E4585 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		87CD3A57252DE9E9001275E8 /* SetupProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupProfileViewController.swift; sourceTree = "<group>"; };
 		87CD3A5A252DEC27001275E8 /* AddPhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPhotoView.swift; sourceTree = "<group>"; };
+		87D5C589252F11E2009B5A01 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		87D5C58D252F11FC009B5A01 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		87D5C590252F1208009B5A01 /* PeopleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewController.swift; sourceTree = "<group>"; };
 		87EB3F002512370D001BB298 /* IChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		87EB3F032512370D001BB298 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		87EB3F052512370D001BB298 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -86,6 +92,27 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		877EC116252E030800E26FDF /* SignIn&Auth */ = {
+			isa = PBXGroup;
+			children = (
+				87EB3F072512370D001BB298 /* AuthViewController.swift */,
+				875F118525274EC300101D0D /* SignUpViewController.swift */,
+				878546A7252C89FD005E4585 /* LoginViewController.swift */,
+				87CD3A57252DE9E9001275E8 /* SetupProfileViewController.swift */,
+			);
+			path = "SignIn&Auth";
+			sourceTree = "<group>";
+		};
+		87D5C588252F11B3009B5A01 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				87D5C589252F11E2009B5A01 /* MainTabBarController.swift */,
+				87D5C58D252F11FC009B5A01 /* ListViewController.swift */,
+				87D5C590252F1208009B5A01 /* PeopleViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		87EB3EF72512370D001BB298 = {
 			isa = PBXGroup;
 			children = (
@@ -105,16 +132,14 @@
 		87EB3F022512370D001BB298 /* IChat */ = {
 			isa = PBXGroup;
 			children = (
+				87D5C588252F11B3009B5A01 /* Controllers */,
 				8773467C2527447500A11276 /* Extensions */,
 				87EB3F032512370D001BB298 /* AppDelegate.swift */,
 				87EB3F052512370D001BB298 /* SceneDelegate.swift */,
-				87EB3F072512370D001BB298 /* AuthViewController.swift */,
+				877EC116252E030800E26FDF /* SignIn&Auth */,
 				87EB3F0C2512370E001BB298 /* Assets.xcassets */,
 				87EB3F0E2512370E001BB298 /* LaunchScreen.storyboard */,
 				87EB3F112512370E001BB298 /* Info.plist */,
-				875F118525274EC300101D0D /* SignUpViewController.swift */,
-				878546A7252C89FD005E4585 /* LoginViewController.swift */,
-				87CD3A57252DE9E9001275E8 /* SetupProfileViewController.swift */,
 			);
 			path = IChat;
 			sourceTree = "<group>";
@@ -193,6 +218,7 @@
 				875F118625274EC300101D0D /* SignUpViewController.swift in Sources */,
 				8773467825272D0600A11276 /* Color+Extension.swift in Sources */,
 				8773467725272D0600A11276 /* Font+Extension.swift in Sources */,
+				87D5C591252F1208009B5A01 /* PeopleViewController.swift in Sources */,
 				87CD3A58252DE9E9001275E8 /* SetupProfileViewController.swift in Sources */,
 				8773467925272D0600A11276 /* ImageView+Extension.swift in Sources */,
 				87734682252748A700A11276 /* StackView+Extension.swift in Sources */,
@@ -202,8 +228,10 @@
 				87EB3F082512370D001BB298 /* AuthViewController.swift in Sources */,
 				87EB3F042512370D001BB298 /* AppDelegate.swift in Sources */,
 				8773467625272D0600A11276 /* Button+Extension.swift in Sources */,
+				87D5C58E252F11FC009B5A01 /* ListViewController.swift in Sources */,
 				878546A8252C89FD005E4585 /* LoginViewController.swift in Sources */,
 				87EB3F062512370D001BB298 /* SceneDelegate.swift in Sources */,
+				87D5C58A252F11E2009B5A01 /* MainTabBarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
