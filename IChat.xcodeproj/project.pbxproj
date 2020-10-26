@@ -12,6 +12,7 @@
 		876ED80C2546FE85000CE860 /* Bundle-Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876ED80B2546FE85000CE860 /* Bundle-Decodable.swift */; };
 		876ED8102546FFA5000CE860 /* activeChats.json in Resources */ = {isa = PBXBuildFile; fileRef = 876ED80E2546FFA5000CE860 /* activeChats.json */; };
 		876ED8112546FFA5000CE860 /* waitingChats.json in Resources */ = {isa = PBXBuildFile; fileRef = 876ED80F2546FFA5000CE860 /* waitingChats.json */; };
+		876ED8152547057A000CE860 /* ActiveChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876ED8142547057A000CE860 /* ActiveChatCell.swift */; };
 		8773467525272D0600A11276 /* Label+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8773467025272D0600A11276 /* Label+Extension.swift */; };
 		8773467625272D0600A11276 /* Button+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8773467125272D0600A11276 /* Button+Extension.swift */; };
 		8773467725272D0600A11276 /* Font+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8773467225272D0600A11276 /* Font+Extension.swift */; };
@@ -39,6 +40,7 @@
 		876ED80B2546FE85000CE860 /* Bundle-Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-Decodable.swift"; sourceTree = "<group>"; };
 		876ED80E2546FFA5000CE860 /* activeChats.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = activeChats.json; sourceTree = "<group>"; };
 		876ED80F2546FFA5000CE860 /* waitingChats.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = waitingChats.json; sourceTree = "<group>"; };
+		876ED8142547057A000CE860 /* ActiveChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveChatCell.swift; sourceTree = "<group>"; };
 		8773467025272D0600A11276 /* Label+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Label+Extension.swift"; sourceTree = "<group>"; };
 		8773467125272D0600A11276 /* Button+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Button+Extension.swift"; sourceTree = "<group>"; };
 		8773467225272D0600A11276 /* Font+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Font+Extension.swift"; sourceTree = "<group>"; };
@@ -73,6 +75,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		876ED81325470561000CE860 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				876ED8142547057A000CE860 /* ActiveChatCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		8773466D25272C7D00A11276 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
@@ -115,6 +125,7 @@
 		87D5C588252F11B3009B5A01 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				876ED81325470561000CE860 /* Cell */,
 				87D5C589252F11E2009B5A01 /* MainTabBarController.swift */,
 				87D5C58D252F11FC009B5A01 /* ListViewController.swift */,
 				87D5C590252F1208009B5A01 /* PeopleViewController.swift */,
@@ -228,6 +239,7 @@
 				875F1189252750A400101D0D /* OneLineTextField.swift in Sources */,
 				875F118625274EC300101D0D /* SignUpViewController.swift in Sources */,
 				8773467825272D0600A11276 /* Color+Extension.swift in Sources */,
+				876ED8152547057A000CE860 /* ActiveChatCell.swift in Sources */,
 				8773467725272D0600A11276 /* Font+Extension.swift in Sources */,
 				87D5C591252F1208009B5A01 /* PeopleViewController.swift in Sources */,
 				87CD3A58252DE9E9001275E8 /* SetupProfileViewController.swift in Sources */,
