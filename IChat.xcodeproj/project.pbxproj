@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		875F118625274EC300101D0D /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875F118525274EC300101D0D /* SignUpViewController.swift */; };
 		875F1189252750A400101D0D /* OneLineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875F1188252750A400101D0D /* OneLineTextField.swift */; };
+		876ED80C2546FE85000CE860 /* Bundle-Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876ED80B2546FE85000CE860 /* Bundle-Decodable.swift */; };
+		876ED8102546FFA5000CE860 /* activeChats.json in Resources */ = {isa = PBXBuildFile; fileRef = 876ED80E2546FFA5000CE860 /* activeChats.json */; };
+		876ED8112546FFA5000CE860 /* waitingChats.json in Resources */ = {isa = PBXBuildFile; fileRef = 876ED80F2546FFA5000CE860 /* waitingChats.json */; };
 		8773467525272D0600A11276 /* Label+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8773467025272D0600A11276 /* Label+Extension.swift */; };
 		8773467625272D0600A11276 /* Button+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8773467125272D0600A11276 /* Button+Extension.swift */; };
 		8773467725272D0600A11276 /* Font+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8773467225272D0600A11276 /* Font+Extension.swift */; };
@@ -33,6 +36,9 @@
 /* Begin PBXFileReference section */
 		875F118525274EC300101D0D /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		875F1188252750A400101D0D /* OneLineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneLineTextField.swift; sourceTree = "<group>"; };
+		876ED80B2546FE85000CE860 /* Bundle-Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-Decodable.swift"; sourceTree = "<group>"; };
+		876ED80E2546FFA5000CE860 /* activeChats.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = activeChats.json; sourceTree = "<group>"; };
+		876ED80F2546FFA5000CE860 /* waitingChats.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = waitingChats.json; sourceTree = "<group>"; };
 		8773467025272D0600A11276 /* Label+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Label+Extension.swift"; sourceTree = "<group>"; };
 		8773467125272D0600A11276 /* Button+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Button+Extension.swift"; sourceTree = "<group>"; };
 		8773467225272D0600A11276 /* Font+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Font+Extension.swift"; sourceTree = "<group>"; };
@@ -70,6 +76,8 @@
 		8773466D25272C7D00A11276 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				876ED80E2546FFA5000CE860 /* activeChats.json */,
+				876ED80F2546FFA5000CE860 /* waitingChats.json */,
 				8773467125272D0600A11276 /* Button+Extension.swift */,
 				8773467325272D0600A11276 /* Color+Extension.swift */,
 				8773467225272D0600A11276 /* Font+Extension.swift */,
@@ -88,6 +96,7 @@
 				875F1188252750A400101D0D /* OneLineTextField.swift */,
 				8773467E2527457100A11276 /* ButtonFormView.swift */,
 				8773466D25272C7D00A11276 /* UIKit */,
+				876ED80B2546FE85000CE860 /* Bundle-Decodable.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -202,7 +211,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				87EB3F102512370E001BB298 /* LaunchScreen.storyboard in Resources */,
+				876ED8102546FFA5000CE860 /* activeChats.json in Resources */,
 				87EB3F0D2512370E001BB298 /* Assets.xcassets in Resources */,
+				876ED8112546FFA5000CE860 /* waitingChats.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,6 +231,7 @@
 				8773467725272D0600A11276 /* Font+Extension.swift in Sources */,
 				87D5C591252F1208009B5A01 /* PeopleViewController.swift in Sources */,
 				87CD3A58252DE9E9001275E8 /* SetupProfileViewController.swift in Sources */,
+				876ED80C2546FE85000CE860 /* Bundle-Decodable.swift in Sources */,
 				8773467925272D0600A11276 /* ImageView+Extension.swift in Sources */,
 				87734682252748A700A11276 /* StackView+Extension.swift in Sources */,
 				87CD3A5B252DEC27001275E8 /* AddPhotoView.swift in Sources */,
