@@ -22,6 +22,7 @@
 		87734682252748A700A11276 /* StackView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87734681252748A700A11276 /* StackView+Extension.swift */; };
 		877EC10E252DFDF600E26FDF /* SegmentedControl+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877EC10D252DFDF600E26FDF /* SegmentedControl+Extension.swift */; };
 		878546A8252C89FD005E4585 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878546A7252C89FD005E4585 /* LoginViewController.swift */; };
+		8786557625480800001A0406 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8786557525480800001A0406 /* GradientView.swift */; };
 		87CD3A58252DE9E9001275E8 /* SetupProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87CD3A57252DE9E9001275E8 /* SetupProfileViewController.swift */; };
 		87CD3A5B252DEC27001275E8 /* AddPhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87CD3A5A252DEC27001275E8 /* AddPhotoView.swift */; };
 		87D5C58A252F11E2009B5A01 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D5C589252F11E2009B5A01 /* MainTabBarController.swift */; };
@@ -50,6 +51,7 @@
 		87734681252748A700A11276 /* StackView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StackView+Extension.swift"; sourceTree = "<group>"; };
 		877EC10D252DFDF600E26FDF /* SegmentedControl+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SegmentedControl+Extension.swift"; sourceTree = "<group>"; };
 		878546A7252C89FD005E4585 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		8786557525480800001A0406 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		87CD3A57252DE9E9001275E8 /* SetupProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupProfileViewController.swift; sourceTree = "<group>"; };
 		87CD3A5A252DEC27001275E8 /* AddPhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPhotoView.swift; sourceTree = "<group>"; };
 		87D5C589252F11E2009B5A01 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
@@ -105,8 +107,9 @@
 				87CD3A5A252DEC27001275E8 /* AddPhotoView.swift */,
 				875F1188252750A400101D0D /* OneLineTextField.swift */,
 				8773467E2527457100A11276 /* ButtonFormView.swift */,
-				8773466D25272C7D00A11276 /* UIKit */,
 				876ED80B2546FE85000CE860 /* Bundle-Decodable.swift */,
+				8786557525480800001A0406 /* GradientView.swift */,
+				8773466D25272C7D00A11276 /* UIKit */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -237,6 +240,7 @@
 			files = (
 				877EC10E252DFDF600E26FDF /* SegmentedControl+Extension.swift in Sources */,
 				875F1189252750A400101D0D /* OneLineTextField.swift in Sources */,
+				8786557625480800001A0406 /* GradientView.swift in Sources */,
 				875F118625274EC300101D0D /* SignUpViewController.swift in Sources */,
 				8773467825272D0600A11276 /* Color+Extension.swift in Sources */,
 				876ED8152547057A000CE860 /* ActiveChatCell.swift in Sources */,
