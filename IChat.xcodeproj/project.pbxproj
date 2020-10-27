@@ -23,6 +23,8 @@
 		877EC10E252DFDF600E26FDF /* SegmentedControl+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877EC10D252DFDF600E26FDF /* SegmentedControl+Extension.swift */; };
 		878546A8252C89FD005E4585 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878546A7252C89FD005E4585 /* LoginViewController.swift */; };
 		8786557625480800001A0406 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8786557525480800001A0406 /* GradientView.swift */; };
+		8786557A25481307001A0406 /* WaitingChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8786557925481307001A0406 /* WaitingChatCell.swift */; };
+		8786557E2548193E001A0406 /* SelfConfigurationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8786557D2548193E001A0406 /* SelfConfigurationCell.swift */; };
 		87CD3A58252DE9E9001275E8 /* SetupProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87CD3A57252DE9E9001275E8 /* SetupProfileViewController.swift */; };
 		87CD3A5B252DEC27001275E8 /* AddPhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87CD3A5A252DEC27001275E8 /* AddPhotoView.swift */; };
 		87D5C58A252F11E2009B5A01 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D5C589252F11E2009B5A01 /* MainTabBarController.swift */; };
@@ -52,6 +54,8 @@
 		877EC10D252DFDF600E26FDF /* SegmentedControl+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SegmentedControl+Extension.swift"; sourceTree = "<group>"; };
 		878546A7252C89FD005E4585 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		8786557525480800001A0406 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		8786557925481307001A0406 /* WaitingChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingChatCell.swift; sourceTree = "<group>"; };
+		8786557D2548193E001A0406 /* SelfConfigurationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfConfigurationCell.swift; sourceTree = "<group>"; };
 		87CD3A57252DE9E9001275E8 /* SetupProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupProfileViewController.swift; sourceTree = "<group>"; };
 		87CD3A5A252DEC27001275E8 /* AddPhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPhotoView.swift; sourceTree = "<group>"; };
 		87D5C589252F11E2009B5A01 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
@@ -81,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				876ED8142547057A000CE860 /* ActiveChatCell.swift */,
+				8786557925481307001A0406 /* WaitingChatCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -125,13 +130,21 @@
 			path = "SignIn&Auth";
 			sourceTree = "<group>";
 		};
+		878655802548194B001A0406 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				8786557D2548193E001A0406 /* SelfConfigurationCell.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		87D5C588252F11B3009B5A01 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				876ED81325470561000CE860 /* Cell */,
 				87D5C589252F11E2009B5A01 /* MainTabBarController.swift */,
 				87D5C58D252F11FC009B5A01 /* ListViewController.swift */,
 				87D5C590252F1208009B5A01 /* PeopleViewController.swift */,
+				876ED81325470561000CE860 /* Cell */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -156,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				87D5C588252F11B3009B5A01 /* Controllers */,
+				878655802548194B001A0406 /* Protocols */,
 				8773467C2527447500A11276 /* Extensions */,
 				87EB3F032512370D001BB298 /* AppDelegate.swift */,
 				87EB3F052512370D001BB298 /* SceneDelegate.swift */,
@@ -254,7 +268,9 @@
 				8773467F2527457100A11276 /* ButtonFormView.swift in Sources */,
 				8773467525272D0600A11276 /* Label+Extension.swift in Sources */,
 				87EB3F082512370D001BB298 /* AuthViewController.swift in Sources */,
+				8786557E2548193E001A0406 /* SelfConfigurationCell.swift in Sources */,
 				87EB3F042512370D001BB298 /* AppDelegate.swift in Sources */,
+				8786557A25481307001A0406 /* WaitingChatCell.swift in Sources */,
 				8773467625272D0600A11276 /* Button+Extension.swift in Sources */,
 				87D5C58E252F11FC009B5A01 /* ListViewController.swift in Sources */,
 				878546A8252C89FD005E4585 /* LoginViewController.swift in Sources */,

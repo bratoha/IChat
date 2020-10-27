@@ -7,11 +7,6 @@
 
 import UIKit
 
-protocol SelfConfiguringCell {
-    static var reuseId: String { get }
-    func configurate(with value: MChat)
-}
-
 class ActiveChatCell: UICollectionViewCell, SelfConfiguringCell {
     
     static var reuseId: String = "ActiveChatCell"
@@ -30,7 +25,7 @@ class ActiveChatCell: UICollectionViewCell, SelfConfiguringCell {
         self.clipsToBounds = true
     }
     
-    func configurate(with value: MChat) {
+    func configure(with value: MChat) {
         friendImageView.image = UIImage(named: value.userImageString)
         friendName.text = value.username
         lastMessage.text = value.lastMessage
