@@ -10,6 +10,7 @@
 		875CDAD425501B900090A464 /* InsertableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875CDAD325501B900090A464 /* InsertableTextField.swift */; };
 		875CDAD725501C830090A464 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875CDAD625501C830090A464 /* UIView+Extension.swift */; };
 		875CDADB25501E530090A464 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875CDADA25501E530090A464 /* ProfileViewController.swift */; };
+		875CDADE255026850090A464 /* ChatRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875CDADD255026850090A464 /* ChatRequestViewController.swift */; };
 		875F118625274EC300101D0D /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875F118525274EC300101D0D /* SignUpViewController.swift */; };
 		875F1189252750A400101D0D /* OneLineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875F1188252750A400101D0D /* OneLineTextField.swift */; };
 		876ED80C2546FE85000CE860 /* Bundle-Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876ED80B2546FE85000CE860 /* Bundle-Decodable.swift */; };
@@ -50,6 +51,7 @@
 		875CDAD325501B900090A464 /* InsertableTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InsertableTextField.swift; sourceTree = "<group>"; };
 		875CDAD625501C830090A464 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		875CDADA25501E530090A464 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		875CDADD255026850090A464 /* ChatRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRequestViewController.swift; sourceTree = "<group>"; };
 		875F118525274EC300101D0D /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		875F1188252750A400101D0D /* OneLineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneLineTextField.swift; sourceTree = "<group>"; };
 		876ED80B2546FE85000CE860 /* Bundle-Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-Decodable.swift"; sourceTree = "<group>"; };
@@ -161,10 +163,11 @@
 		87D5C588252F11B3009B5A01 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				875CDADA25501E530090A464 /* ProfileViewController.swift */,
 				87D5C589252F11E2009B5A01 /* MainTabBarController.swift */,
 				87D5C58D252F11FC009B5A01 /* ListViewController.swift */,
 				87D5C590252F1208009B5A01 /* PeopleViewController.swift */,
+				875CDADA25501E530090A464 /* ProfileViewController.swift */,
+				875CDADD255026850090A464 /* ChatRequestViewController.swift */,
 				876ED81325470561000CE860 /* Cell */,
 				87D8AC43254829DC0058FF84 /* Header */,
 			);
@@ -311,6 +314,7 @@
 				87D5C591252F1208009B5A01 /* PeopleViewController.swift in Sources */,
 				87CD3A58252DE9E9001275E8 /* SetupProfileViewController.swift in Sources */,
 				876ED80C2546FE85000CE860 /* Bundle-Decodable.swift in Sources */,
+				875CDADE255026850090A464 /* ChatRequestViewController.swift in Sources */,
 				8773467925272D0600A11276 /* ImageView+Extension.swift in Sources */,
 				87734682252748A700A11276 /* StackView+Extension.swift in Sources */,
 				87CD3A5B252DEC27001275E8 /* AddPhotoView.swift in Sources */,

@@ -16,7 +16,7 @@ extension UIView {
         if let gradientLayer = gradientView.layer.sublayers?.first as? CAGradientLayer {
             gradientLayer.frame = self.bounds
             gradientLayer.cornerRadius = cornerRadius
-            self.layer.addSublayer(gradientLayer)
+            self.layer.insertSublayer(gradientLayer, at: 0)
         }
     }
     
