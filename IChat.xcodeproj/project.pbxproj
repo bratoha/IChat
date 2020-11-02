@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,7 @@
 		875CDADB25501E530090A464 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875CDADA25501E530090A464 /* ProfileViewController.swift */; };
 		875CDADE255026850090A464 /* ChatRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875CDADD255026850090A464 /* ChatRequestViewController.swift */; };
 		875CDAE3255036130090A464 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 875CDAE2255036130090A464 /* GoogleService-Info.plist */; };
+		875CDAF525503BAA0090A464 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875CDAF425503BAA0090A464 /* AuthService.swift */; };
 		875F118625274EC300101D0D /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875F118525274EC300101D0D /* SignUpViewController.swift */; };
 		875F1189252750A400101D0D /* OneLineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875F1188252750A400101D0D /* OneLineTextField.swift */; };
 		876ED80C2546FE85000CE860 /* Bundle-Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876ED80B2546FE85000CE860 /* Bundle-Decodable.swift */; };
@@ -55,6 +56,7 @@
 		875CDADA25501E530090A464 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		875CDADD255026850090A464 /* ChatRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRequestViewController.swift; sourceTree = "<group>"; };
 		875CDAE2255036130090A464 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		875CDAF425503BAA0090A464 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		875F118525274EC300101D0D /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		875F1188252750A400101D0D /* OneLineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneLineTextField.swift; sourceTree = "<group>"; };
 		876ED80B2546FE85000CE860 /* Bundle-Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-Decodable.swift"; sourceTree = "<group>"; };
@@ -108,6 +110,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		875CDAF325503B900090A464 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				87D8AC4E25482B540058FF84 /* Model */,
+				875CDAF425503BAA0090A464 /* AuthService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		876ED81325470561000CE860 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -219,7 +230,7 @@
 		87EB3F022512370D001BB298 /* IChat */ = {
 			isa = PBXGroup;
 			children = (
-				87D8AC4E25482B540058FF84 /* Model */,
+				875CDAF325503B900090A464 /* Services */,
 				877EC116252E030800E26FDF /* SignIn&Auth */,
 				87D5C588252F11B3009B5A01 /* Controllers */,
 				878655802548194B001A0406 /* Protocols */,
@@ -251,7 +262,6 @@
 				9FB376B04563C8AC71768764 /* Pods-IChat.debug.xcconfig */,
 				D2EE698770982AC219738853 /* Pods-IChat.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -403,6 +413,7 @@
 				87D5C58E252F11FC009B5A01 /* ListViewController.swift in Sources */,
 				87D8AC55254835250058FF84 /* ViewController+Extension.swift in Sources */,
 				878546A8252C89FD005E4585 /* LoginViewController.swift in Sources */,
+				875CDAF525503BAA0090A464 /* AuthService.swift in Sources */,
 				87EB3F062512370D001BB298 /* SceneDelegate.swift in Sources */,
 				87D5C58A252F11E2009B5A01 /* MainTabBarController.swift in Sources */,
 			);
