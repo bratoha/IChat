@@ -16,6 +16,8 @@
 		875CDAF525503BAA0090A464 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875CDAF425503BAA0090A464 /* AuthService.swift */; };
 		875F118625274EC300101D0D /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875F118525274EC300101D0D /* SignUpViewController.swift */; };
 		875F1189252750A400101D0D /* OneLineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875F1188252750A400101D0D /* OneLineTextField.swift */; };
+		8768366D25514D9A0020845E /* Validators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8768366C25514D9A0020845E /* Validators.swift */; };
+		87683670255154330020845E /* AuthError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8768366F255154330020845E /* AuthError.swift */; };
 		876ED80C2546FE85000CE860 /* Bundle-Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876ED80B2546FE85000CE860 /* Bundle-Decodable.swift */; };
 		876ED8102546FFA5000CE860 /* activeChats.json in Resources */ = {isa = PBXBuildFile; fileRef = 876ED80E2546FFA5000CE860 /* activeChats.json */; };
 		876ED8112546FFA5000CE860 /* waitingChats.json in Resources */ = {isa = PBXBuildFile; fileRef = 876ED80F2546FFA5000CE860 /* waitingChats.json */; };
@@ -59,6 +61,8 @@
 		875CDAF425503BAA0090A464 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		875F118525274EC300101D0D /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		875F1188252750A400101D0D /* OneLineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneLineTextField.swift; sourceTree = "<group>"; };
+		8768366C25514D9A0020845E /* Validators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validators.swift; sourceTree = "<group>"; };
+		8768366F255154330020845E /* AuthError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthError.swift; sourceTree = "<group>"; };
 		876ED80B2546FE85000CE860 /* Bundle-Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-Decodable.swift"; sourceTree = "<group>"; };
 		876ED80E2546FFA5000CE860 /* activeChats.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = activeChats.json; sourceTree = "<group>"; };
 		876ED80F2546FFA5000CE860 /* waitingChats.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = waitingChats.json; sourceTree = "<group>"; };
@@ -117,6 +121,15 @@
 				875CDAF425503BAA0090A464 /* AuthService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		876836722551565F0020845E /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				8768366C25514D9A0020845E /* Validators.swift */,
+				8768366F255154330020845E /* AuthError.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		876ED81325470561000CE860 /* Cell */ = {
@@ -230,6 +243,7 @@
 		87EB3F022512370D001BB298 /* IChat */ = {
 			isa = PBXGroup;
 			children = (
+				876836722551565F0020845E /* Helpers */,
 				875CDAF325503B900090A464 /* Services */,
 				877EC116252E030800E26FDF /* SignIn&Auth */,
 				87D5C588252F11B3009B5A01 /* Controllers */,
@@ -388,8 +402,10 @@
 				87D8AC4125481B2D0058FF84 /* SectionHeader.swift in Sources */,
 				8786557625480800001A0406 /* GradientView.swift in Sources */,
 				875F118625274EC300101D0D /* SignUpViewController.swift in Sources */,
+				87683670255154330020845E /* AuthError.swift in Sources */,
 				875CDADB25501E530090A464 /* ProfileViewController.swift in Sources */,
 				8773467825272D0600A11276 /* Color+Extension.swift in Sources */,
+				8768366D25514D9A0020845E /* Validators.swift in Sources */,
 				87D8AC4825482A8C0058FF84 /* MUser.swift in Sources */,
 				876ED8152547057A000CE860 /* ActiveChatCell.swift in Sources */,
 				8773467725272D0600A11276 /* Font+Extension.swift in Sources */,
