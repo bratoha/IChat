@@ -25,6 +25,9 @@ class AuthViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        loginViewController.delegare = self
+        signUpViewController.delegate = self
+        
         googleButton.customizedGoogleButton()
         view.backgroundColor = .white
         setupConstraints()
@@ -71,6 +74,19 @@ extension AuthViewController {
             stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40),
             stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -40)
         ])
+    }
+    
+    
+}
+
+extension AuthViewController: AuthNavigationDelegate {
+    
+    func toLoginViewController() {
+        present(loginViewController, animated: true)
+    }
+    
+    func toSignUpViewController() {
+        present(signUpViewController, animated: true)
     }
     
     
