@@ -21,6 +21,7 @@
 		8765CAAD25540EC5003694F4 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8765CAAC25540EC5003694F4 /* UIImage+Extension.swift */; };
 		8765CAB0255419EE003694F4 /* ListenerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8765CAAF255419EE003694F4 /* ListenerService.swift */; };
 		8765CAE8255423FF003694F4 /* MMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8765CAE7255423FF003694F4 /* MMessage.swift */; };
+		8765CAEB25543468003694F4 /* WaitingChatsNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8765CAEA25543468003694F4 /* WaitingChatsNavigation.swift */; };
 		8768366D25514D9A0020845E /* Validators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8768366C25514D9A0020845E /* Validators.swift */; };
 		87683670255154330020845E /* AuthError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8768366F255154330020845E /* AuthError.swift */; };
 		8768367525515E7C0020845E /* AuthNavigationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8768367425515E7C0020845E /* AuthNavigationDelegate.swift */; };
@@ -74,6 +75,7 @@
 		8765CAAC25540EC5003694F4 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		8765CAAF255419EE003694F4 /* ListenerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListenerService.swift; sourceTree = "<group>"; };
 		8765CAE7255423FF003694F4 /* MMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MMessage.swift; sourceTree = "<group>"; };
+		8765CAEA25543468003694F4 /* WaitingChatsNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingChatsNavigation.swift; sourceTree = "<group>"; };
 		8768366C25514D9A0020845E /* Validators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validators.swift; sourceTree = "<group>"; };
 		8768366F255154330020845E /* AuthError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthError.swift; sourceTree = "<group>"; };
 		8768367425515E7C0020845E /* AuthNavigationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthNavigationDelegate.swift; sourceTree = "<group>"; };
@@ -210,6 +212,7 @@
 			children = (
 				8786557D2548193E001A0406 /* SelfConfigurationCell.swift */,
 				8768367425515E7C0020845E /* AuthNavigationDelegate.swift */,
+				8765CAEA25543468003694F4 /* WaitingChatsNavigation.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -481,6 +484,7 @@
 				878546A8252C89FD005E4585 /* LoginViewController.swift in Sources */,
 				875CDAF525503BAA0090A464 /* AuthService.swift in Sources */,
 				87EB3F062512370D001BB298 /* SceneDelegate.swift in Sources */,
+				8765CAEB25543468003694F4 /* WaitingChatsNavigation.swift in Sources */,
 				87D5C58A252F11E2009B5A01 /* MainTabBarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
