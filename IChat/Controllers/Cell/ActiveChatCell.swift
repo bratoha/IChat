@@ -30,8 +30,8 @@ class ActiveChatCell: UICollectionViewCell, SelfConfiguringCell {
             return
         }
         
-        friendImageView.image = UIImage(named: chat.userImageString)
-        friendName.text = chat.username
+        friendImageView.image = UIImage(named: chat.friendAvatarStringURL)
+        friendName.text = chat.friendUsername
         lastMessage.text = chat.lastMessage
     }
     

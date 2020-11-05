@@ -28,7 +28,7 @@ class WaitingChatCell: UICollectionViewCell, SelfConfiguringCell {
             return
         }
         
-        friendImageView.image = UIImage(named: chat.userImageString)
+        friendImageView.image = UIImage(named: chat.friendAvatarStringURL)
     }
     
     private func setupConstraints() {

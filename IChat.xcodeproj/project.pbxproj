@@ -19,6 +19,8 @@
 		875F118625274EC300101D0D /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875F118525274EC300101D0D /* SignUpViewController.swift */; };
 		875F1189252750A400101D0D /* OneLineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875F1188252750A400101D0D /* OneLineTextField.swift */; };
 		8765CAAD25540EC5003694F4 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8765CAAC25540EC5003694F4 /* UIImage+Extension.swift */; };
+		8765CAB0255419EE003694F4 /* ListenerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8765CAAF255419EE003694F4 /* ListenerService.swift */; };
+		8765CAE8255423FF003694F4 /* MMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8765CAE7255423FF003694F4 /* MMessage.swift */; };
 		8768366D25514D9A0020845E /* Validators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8768366C25514D9A0020845E /* Validators.swift */; };
 		87683670255154330020845E /* AuthError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8768366F255154330020845E /* AuthError.swift */; };
 		8768367525515E7C0020845E /* AuthNavigationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8768367425515E7C0020845E /* AuthNavigationDelegate.swift */; };
@@ -70,6 +72,8 @@
 		875F118525274EC300101D0D /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		875F1188252750A400101D0D /* OneLineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneLineTextField.swift; sourceTree = "<group>"; };
 		8765CAAC25540EC5003694F4 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
+		8765CAAF255419EE003694F4 /* ListenerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListenerService.swift; sourceTree = "<group>"; };
+		8765CAE7255423FF003694F4 /* MMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MMessage.swift; sourceTree = "<group>"; };
 		8768366C25514D9A0020845E /* Validators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validators.swift; sourceTree = "<group>"; };
 		8768366F255154330020845E /* AuthError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthError.swift; sourceTree = "<group>"; };
 		8768367425515E7C0020845E /* AuthNavigationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthNavigationDelegate.swift; sourceTree = "<group>"; };
@@ -133,6 +137,7 @@
 				875CDAF425503BAA0090A464 /* AuthService.swift */,
 				8739C96A2553DEA8006C2A46 /* FirestoreService.swift */,
 				8781F45725540C8C00D97F97 /* StorageService.swift */,
+				8765CAAF255419EE003694F4 /* ListenerService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -236,6 +241,7 @@
 			children = (
 				87D8AC4A25482A940058FF84 /* MChat.swift */,
 				87D8AC4725482A8C0058FF84 /* MUser.swift */,
+				8765CAE7255423FF003694F4 /* MMessage.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -439,6 +445,7 @@
 				8786557625480800001A0406 /* GradientView.swift in Sources */,
 				875F118625274EC300101D0D /* SignUpViewController.swift in Sources */,
 				8781F43C255408AD00D97F97 /* UIApplicetion+Extension.swift in Sources */,
+				8765CAB0255419EE003694F4 /* ListenerService.swift in Sources */,
 				87683670255154330020845E /* AuthError.swift in Sources */,
 				875CDADB25501E530090A464 /* ProfileViewController.swift in Sources */,
 				8773467825272D0600A11276 /* Color+Extension.swift in Sources */,
@@ -470,6 +477,7 @@
 				8773467625272D0600A11276 /* Button+Extension.swift in Sources */,
 				87D5C58E252F11FC009B5A01 /* ListViewController.swift in Sources */,
 				87D8AC55254835250058FF84 /* ViewController+Extension.swift in Sources */,
+				8765CAE8255423FF003694F4 /* MMessage.swift in Sources */,
 				878546A8252C89FD005E4585 /* LoginViewController.swift in Sources */,
 				875CDAF525503BAA0090A464 /* AuthService.swift in Sources */,
 				87EB3F062512370D001BB298 /* SceneDelegate.swift in Sources */,

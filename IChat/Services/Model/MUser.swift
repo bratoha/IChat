@@ -25,11 +25,7 @@ struct MUser: Hashable, Decodable {
         self.id = id
     }
     
-    init?(document: DocumentSnapshot) {
-        guard let data = document.data() else {
-            return nil
-        }
-        
+    init?(data: [String: Any]) {
         guard
             let username = data["username"] as? String,
             let email = data["email"] as? String,
@@ -47,6 +43,18 @@ struct MUser: Hashable, Decodable {
         self.description = description
         self.sex = sex
         self.id = id
+    }
+    
+    init?(document: DocumentSnapshot) {
+        guard let data = document.data() else {
+            return nil
+        }
+        
+        self.init(data: data)
+    }
+    
+    init?(document: QueryDocumentSnapshot) {
+        self.init(data: document.data())
     }
     
     var representation: [String: Any] {

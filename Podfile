@@ -13,6 +13,7 @@ target 'IChat' do
   pod 'Firebase/Firestore'
   pod 'Firebase/Storage'
   pod 'GoogleSignIn'
+  pod 'SDWebImage', '~> 5.0'
   
   post_install do |pi|
       pi.pods_project.targets.each do |t|

@@ -17,15 +17,18 @@ class FirestoreService {
         return db.collection("users")
     }
     
+    var currentUser: MUser!
+    
     func getUserData(user: User, completion: @escaping (Result<MUser, Error>) -> Void) {
         let docRef = usersRef.document(user.uid)
         docRef.getDocument { (document, error) in
             if let document = document, document.exists {
-                guard let muser = MUser(document: document) else {
+                guard let mUser = MUser(document: document) else {
                     completion(.failure(UserError.cannotUnwrapToMUser))
                     return
                 }
-                completion(.success(muser))
+                self.currentUser = mUser
+                completion(.success(mUser))
             } else {
                 completion(.failure(UserError.cannotGetUserInfo))
             }
@@ -61,7 +64,32 @@ class FirestoreService {
                 completion(.failure(error))
             }
         }
+    }
+    
+    func createWaitingChat(message: String, receiver: MUser, completion: @escaping (Result<Void, Error>) -> Void) {
+        let reference = db.collection(["users", receiver.id, "waitingChat"].joined(separator: "/"))
+        let messageRef = reference.document(currentUser.id).collection("messages")
         
+        let message = MMessage(user: currentUser, content: message)
+        let chat = MChat(friendUsername: currentUser.username,
+                         friendAvatarStringURL: currentUser.avatarStringURL,
+                         lastMessage: message.content,
+                         friendId: currentUser.id)
+        
+        reference.document(currentUser.id).setData(chat.representation) { (error) in
+            if let error = error {
+                completion(.failure(error))
+            }
+            
+            messageRef.addDocument(data: message.representation) { (error) in
+                if let error = error {
+                    completion(.failure(error))
+                    return
+                }
+                
+                completion(.success(Void()))
+            }
+        }
     }
     
 }

@@ -7,10 +7,12 @@
 
 import UIKit
 import FirebaseAuth
+import FirebaseFirestore
 
 class PeopleViewController: UIViewController {
     
-    let users = [MUser]() //Bundle.main.decode([MUser].self, from: "users.json")
+    var users = [MUser]() //Bundle.main.decode([MUser].self, from: "users.json")
+    private var usersListener: ListenerRegistration?
     var collectionView: UICollectionView!
     var dataSource: UICollectionViewDiffableDataSource<Section, MUser>!
     
@@ -37,15 +39,28 @@ class PeopleViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    deinit {
+        usersListener?.remove()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setupSearchBar()
         setupCollectionView()
         createDataSource()
-        reloadData()
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Log Out", style: .plain, target: self, action: #selector(signOut))
+        
+        usersListener = ListenerService.shared.usersObserve(users: users, completion: { (result) in
+            switch result {
+            case .success(let users):
+                self.users = users
+                self.reloadData()
+            case .failure(let error):
+                self.showAlert(with: "Ошибка!", and: error.localizedDescription)
+            }
+        })
     }
     
     @objc private func signOut() {
@@ -68,6 +83,7 @@ class PeopleViewController: UIViewController {
         collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: createCompositionalLayout())
         collectionView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         collectionView.backgroundColor = .mainWhite()
+        collectionView.delegate = self
         view.addSubview(collectionView)
         
         collectionView.register(UserCell.self, forCellWithReuseIdentifier: UserCell.reuseId)
@@ -122,7 +138,7 @@ extension PeopleViewController {
                 fatalError("Unknown section kind")
             }
             let items = self.dataSource.snapshot().itemIdentifiers(inSection: .users)
-            sectionHeader.configure(text: section.description(usersCount: items.count), font: .systemFont(ofSize: 36, weight: .light   ), textColor: .label)
+            sectionHeader.configure(text: section.description(usersCount: items.count), font: .systemFont(ofSize: 36, weight: .light), textColor: .label)
             
             return sectionHeader
         }
@@ -179,6 +195,18 @@ extension PeopleViewController {
 extension PeopleViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         reloadData(with: searchText)
+    }
+}
+
+// MARK: UICollectionViewDelegate
+extension PeopleViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let user = self.dataSource.itemIdentifier(for: indexPath) else {
+            return
+        }
+        
+        let profileViewController = ProfileViewController(user: user)
+        present(profileViewController, animated: true)
     }
 }
 
