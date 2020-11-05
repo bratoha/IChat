@@ -33,6 +33,7 @@
 		8773467F2527457100A11276 /* ButtonFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8773467E2527457100A11276 /* ButtonFormView.swift */; };
 		87734682252748A700A11276 /* StackView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87734681252748A700A11276 /* StackView+Extension.swift */; };
 		877EC10E252DFDF600E26FDF /* SegmentedControl+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877EC10D252DFDF600E26FDF /* SegmentedControl+Extension.swift */; };
+		8781F43C255408AD00D97F97 /* UIApplicetion+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8781F43B255408AD00D97F97 /* UIApplicetion+Extension.swift */; };
 		878546A8252C89FD005E4585 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878546A7252C89FD005E4585 /* LoginViewController.swift */; };
 		8786557625480800001A0406 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8786557525480800001A0406 /* GradientView.swift */; };
 		8786557A25481307001A0406 /* WaitingChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8786557925481307001A0406 /* WaitingChatCell.swift */; };
@@ -81,6 +82,7 @@
 		8773467E2527457100A11276 /* ButtonFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonFormView.swift; sourceTree = "<group>"; };
 		87734681252748A700A11276 /* StackView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StackView+Extension.swift"; sourceTree = "<group>"; };
 		877EC10D252DFDF600E26FDF /* SegmentedControl+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SegmentedControl+Extension.swift"; sourceTree = "<group>"; };
+		8781F43B255408AD00D97F97 /* UIApplicetion+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplicetion+Extension.swift"; sourceTree = "<group>"; };
 		878546A7252C89FD005E4585 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		8786557525480800001A0406 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		8786557925481307001A0406 /* WaitingChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingChatCell.swift; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 				877EC10D252DFDF600E26FDF /* SegmentedControl+Extension.swift */,
 				87D8AC54254835250058FF84 /* ViewController+Extension.swift */,
 				875CDAD625501C830090A464 /* UIView+Extension.swift */,
+				8781F43B255408AD00D97F97 /* UIApplicetion+Extension.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -300,6 +303,7 @@
 				87EB3EFD2512370D001BB298 /* Frameworks */,
 				87EB3EFE2512370D001BB298 /* Resources */,
 				1D14FCFE21D548C8B49783DF /* [CP] Embed Pods Frameworks */,
+				20A49DBC5B7FBE983A31E9DF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -376,6 +380,23 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-IChat/Pods-IChat-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		20A49DBC5B7FBE983A31E9DF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-IChat/Pods-IChat-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-IChat/Pods-IChat-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-IChat/Pods-IChat-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		4A088AF309076C4C2F5D455C /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -411,6 +432,7 @@
 				87D8AC4125481B2D0058FF84 /* SectionHeader.swift in Sources */,
 				8786557625480800001A0406 /* GradientView.swift in Sources */,
 				875F118625274EC300101D0D /* SignUpViewController.swift in Sources */,
+				8781F43C255408AD00D97F97 /* UIApplicetion+Extension.swift in Sources */,
 				87683670255154330020845E /* AuthError.swift in Sources */,
 				875CDADB25501E530090A464 /* ProfileViewController.swift in Sources */,
 				8773467825272D0600A11276 /* Color+Extension.swift in Sources */,

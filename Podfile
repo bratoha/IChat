@@ -11,6 +11,7 @@ target 'IChat' do
   pod 'Firebase/Analytics'
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
+  pod 'GoogleSignIn'
   
   post_install do |pi|
       pi.pods_project.targets.each do |t|

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import GoogleSignIn
 
 class AuthViewController: UIViewController {
     
@@ -34,6 +35,9 @@ class AuthViewController: UIViewController {
         
         emailButton.addTarget(self, action: #selector(emailButtonTapped), for: .touchUpInside)
         loginButton.addTarget(self, action: #selector(loginButtonTapped), for: .touchUpInside)
+        googleButton.addTarget(self, action: #selector(googleButtonTapped), for: .touchUpInside)
+        
+        GIDSignIn.sharedInstance()?.delegate = self
     }
     
     @objc func emailButtonTapped() {
@@ -45,6 +49,11 @@ class AuthViewController: UIViewController {
     @objc func loginButtonTapped() {
         print(#function)
         present(loginViewController, animated: true)
+    }
+    
+    @objc func googleButtonTapped() {
+        GIDSignIn.sharedInstance()?.presentingViewController = self
+        GIDSignIn.sharedInstance().signIn()
     }
 
 }
@@ -89,6 +98,34 @@ extension AuthViewController: AuthNavigationDelegate {
         present(signUpViewController, animated: true)
     }
     
+    
+}
+
+extension AuthViewController: GIDSignInDelegate {
+    
+    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
+        AuthService.shared.googleLogin(user: user, error: error) { (result) in
+            switch result {
+            case .success(let user):
+                FirestoreService.shared.getUserData(user: user) { (userResult) in
+                    switch userResult {
+                    case .success(let mUser):
+                        UIApplication.getTopViewController()?.showAlert(with: "Успешно", and: "Вы авторизованы!") {
+                            let mainTabBar = MainTabBarController(currentUser: mUser)
+                            mainTabBar.modalPresentationStyle = .fullScreen
+                            UIApplication.getTopViewController()?.present(mainTabBar, animated: true)
+                        }
+                    case .failure:
+                        UIApplication.getTopViewController()?.showAlert(with: "Успешно", and: "Вы зарегестрированы!") {
+                            UIApplication.getTopViewController()?.present(SetupProfileViewController(currentUser: user), animated: true)
+                        }
+                    }
+                }
+            case .failure(let error):
+                self.showAlert(with: "Ошибка", and: error.localizedDescription)
+            }
+        }
+    }
     
 }
 
