@@ -18,6 +18,7 @@
 		875CDAF525503BAA0090A464 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875CDAF425503BAA0090A464 /* AuthService.swift */; };
 		875F118625274EC300101D0D /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875F118525274EC300101D0D /* SignUpViewController.swift */; };
 		875F1189252750A400101D0D /* OneLineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875F1188252750A400101D0D /* OneLineTextField.swift */; };
+		8765CAAD25540EC5003694F4 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8765CAAC25540EC5003694F4 /* UIImage+Extension.swift */; };
 		8768366D25514D9A0020845E /* Validators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8768366C25514D9A0020845E /* Validators.swift */; };
 		87683670255154330020845E /* AuthError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8768366F255154330020845E /* AuthError.swift */; };
 		8768367525515E7C0020845E /* AuthNavigationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8768367425515E7C0020845E /* AuthNavigationDelegate.swift */; };
@@ -34,6 +35,7 @@
 		87734682252748A700A11276 /* StackView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87734681252748A700A11276 /* StackView+Extension.swift */; };
 		877EC10E252DFDF600E26FDF /* SegmentedControl+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877EC10D252DFDF600E26FDF /* SegmentedControl+Extension.swift */; };
 		8781F43C255408AD00D97F97 /* UIApplicetion+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8781F43B255408AD00D97F97 /* UIApplicetion+Extension.swift */; };
+		8781F45825540C8C00D97F97 /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8781F45725540C8C00D97F97 /* StorageService.swift */; };
 		878546A8252C89FD005E4585 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878546A7252C89FD005E4585 /* LoginViewController.swift */; };
 		8786557625480800001A0406 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8786557525480800001A0406 /* GradientView.swift */; };
 		8786557A25481307001A0406 /* WaitingChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8786557925481307001A0406 /* WaitingChatCell.swift */; };
@@ -67,6 +69,7 @@
 		875CDAF425503BAA0090A464 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		875F118525274EC300101D0D /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		875F1188252750A400101D0D /* OneLineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneLineTextField.swift; sourceTree = "<group>"; };
+		8765CAAC25540EC5003694F4 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		8768366C25514D9A0020845E /* Validators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validators.swift; sourceTree = "<group>"; };
 		8768366F255154330020845E /* AuthError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthError.swift; sourceTree = "<group>"; };
 		8768367425515E7C0020845E /* AuthNavigationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthNavigationDelegate.swift; sourceTree = "<group>"; };
@@ -83,6 +86,7 @@
 		87734681252748A700A11276 /* StackView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StackView+Extension.swift"; sourceTree = "<group>"; };
 		877EC10D252DFDF600E26FDF /* SegmentedControl+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SegmentedControl+Extension.swift"; sourceTree = "<group>"; };
 		8781F43B255408AD00D97F97 /* UIApplicetion+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplicetion+Extension.swift"; sourceTree = "<group>"; };
+		8781F45725540C8C00D97F97 /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
 		878546A7252C89FD005E4585 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		8786557525480800001A0406 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		8786557925481307001A0406 /* WaitingChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingChatCell.swift; sourceTree = "<group>"; };
@@ -128,6 +132,7 @@
 				87D8AC4E25482B540058FF84 /* Model */,
 				875CDAF425503BAA0090A464 /* AuthService.swift */,
 				8739C96A2553DEA8006C2A46 /* FirestoreService.swift */,
+				8781F45725540C8C00D97F97 /* StorageService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -165,6 +170,7 @@
 				87D8AC54254835250058FF84 /* ViewController+Extension.swift */,
 				875CDAD625501C830090A464 /* UIView+Extension.swift */,
 				8781F43B255408AD00D97F97 /* UIApplicetion+Extension.swift */,
+				8765CAAC25540EC5003694F4 /* UIImage+Extension.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -441,6 +447,7 @@
 				876ED8152547057A000CE860 /* ActiveChatCell.swift in Sources */,
 				8768367525515E7C0020845E /* AuthNavigationDelegate.swift in Sources */,
 				8773467725272D0600A11276 /* Font+Extension.swift in Sources */,
+				8765CAAD25540EC5003694F4 /* UIImage+Extension.swift in Sources */,
 				875CDAD425501B900090A464 /* InsertableTextField.swift in Sources */,
 				8739C96B2553DEA8006C2A46 /* FirestoreService.swift in Sources */,
 				87D5C591252F1208009B5A01 /* PeopleViewController.swift in Sources */,
@@ -454,6 +461,7 @@
 				875CDAD725501C830090A464 /* UIView+Extension.swift in Sources */,
 				8773467F2527457100A11276 /* ButtonFormView.swift in Sources */,
 				8773467525272D0600A11276 /* Label+Extension.swift in Sources */,
+				8781F45825540C8C00D97F97 /* StorageService.swift in Sources */,
 				87EB3F082512370D001BB298 /* AuthViewController.swift in Sources */,
 				8786557E2548193E001A0406 /* SelfConfigurationCell.swift in Sources */,
 				87D8AC522548341A0058FF84 /* UserCell.swift in Sources */,

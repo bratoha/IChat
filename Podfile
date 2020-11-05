@@ -11,6 +11,7 @@ target 'IChat' do
   pod 'Firebase/Analytics'
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
+  pod 'Firebase/Storage'
   pod 'GoogleSignIn'
   
   post_install do |pi|
