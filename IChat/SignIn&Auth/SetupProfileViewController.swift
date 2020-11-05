@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class SetupProfileViewController: UIViewController {
     
@@ -23,12 +24,43 @@ class SetupProfileViewController: UIViewController {
     let goToChatsButton = UIButton(title: "Go to chats!", titleColor: .white, backgroundColor: .buttonDark())
     
     let fillImageView = AddPhotoView()
-
+    
+    private let currentUser: User
+    
+    init(currentUser: User) {
+        self.currentUser = currentUser
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         view.backgroundColor = .white
         setupConstraints()
+        goToChatsButton.addTarget(self, action: #selector(goToChatsButtonTapped), for: .touchUpInside)
+    }
+    
+    @objc private func goToChatsButtonTapped() {
+        FirestoreService.shared.saveProfileWith(
+            id: currentUser.uid,
+            email: currentUser.email!,
+            username: fullNameTextField.text,
+            avatarImageString: "nil",
+            description: aboutMeTextField.text,
+            sex: sexSegmentdControl.titleForSegment(at: sexSegmentdControl.selectedSegmentIndex)) { (result) in
+            switch result {
+            case .success(_):
+                self.showAlert(with: "Успешно", and: "Приятного общения!") {
+                    self.present(MainTabBarController(), animated: true)
+                }
+            case .failure(let error):
+                self.showAlert(with: "Ошибка", and: error.localizedDescription)
+            }
+        }
     }
 
 }
@@ -95,7 +127,7 @@ struct SetupViewControllerProvider: PreviewProvider {
     
     struct ContainerView: UIViewControllerRepresentable {
         
-        let viewController = SetupProfileViewController()
+        let viewController = SetupProfileViewController(currentUser: Auth.auth().currentUser!)
         
         func makeUIViewController(context: Context) -> some UIViewController {
             return viewController
