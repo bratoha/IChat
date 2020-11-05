@@ -49,10 +49,12 @@ class LoginViewController: UIViewController {
             switch result {
             case .success(let user):
                 self.showAlert(with: "Успешно", and: "Вы авторизованы!") {
-                    FirestoreService.shared.getUserData(user: user) { (resutl) in
-                        switch result {
-                        case .success(_):
-                            self.present(MainTabBarController(), animated: true)
+                    FirestoreService.shared.getUserData(user: user) { (userResult) in
+                        switch userResult {
+                        case .success(let mUser):
+                            let mainTabBar = MainTabBarController(currentUser: mUser)
+                            mainTabBar.modalPresentationStyle = .fullScreen
+                            self.present(mainTabBar, animated: true)
                         case .failure(_):
                             self.present(SetupProfileViewController(currentUser: user), animated: true)
                         }
