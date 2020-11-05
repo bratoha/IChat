@@ -47,9 +47,16 @@ class LoginViewController: UIViewController {
         print(#function)
         AuthService.shared.login(email: emailTextField.text, password: passwordTextField.text) { (result) in
             switch result {
-            case .success(_):
+            case .success(let user):
                 self.showAlert(with: "Успешно", and: "Вы авторизованы!") {
-                    self.present(MainTabBarController(), animated: true)
+                    FirestoreService.shared.getUserData(user: user) { (resutl) in
+                        switch result {
+                        case .success(_):
+                            self.present(MainTabBarController(), animated: true)
+                        case .failure(_):
+                            self.present(SetupProfileViewController(currentUser: user), animated: true)
+                        }
+                    }
                 }
             case .failure(let error):
                 self.showAlert(with: "Ошибка", and: error.localizedDescription)

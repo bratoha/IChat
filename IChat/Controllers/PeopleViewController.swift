@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class PeopleViewController: UIViewController {
     
@@ -32,6 +33,24 @@ class PeopleViewController: UIViewController {
         setupCollectionView()
         createDataSource()
         reloadData()
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Log Out", style: .plain, target: self, action: #selector(signOut))
+    }
+    
+    @objc private func signOut() {
+        let ac = UIAlertController(title: nil, message: "Are you sure you want to sign out?", preferredStyle: .alert)
+        
+        ac.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+        ac.addAction(UIAlertAction(title: "Sign Out", style: .destructive, handler: { (_) in
+            do {
+                try Auth.auth().signOut()
+                UIApplication.shared.windows.first?.rootViewController = AuthViewController()
+            } catch {
+                print("Error signin out: \(error.localizedDescription)")
+            }
+        }))
+        
+        present(ac, animated: true)
     }
     
     private func setupCollectionView() {
