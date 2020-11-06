@@ -7,6 +7,7 @@
 
 import UIKit
 import MessageKit
+import InputBarAccessoryView
 
 class ChatsViewController: MessagesViewController {
     
@@ -31,6 +32,25 @@ class ChatsViewController: MessagesViewController {
         super.viewDidLoad()
 
         configureMessageInputBar()
+        
+        if let layout = messagesCollectionView.collectionViewLayout as? MessagesCollectionViewFlowLayout {
+            layout.textMessageSizeCalculator.outgoingAvatarSize = .zero
+            layout.textMessageSizeCalculator.incomingAvatarSize = .zero
+        }
+        
+        messageInputBar.delegate = self
+        messagesCollectionView.backgroundColor = .mainWhite()
+        messagesCollectionView.messagesDataSource = self
+        messagesCollectionView.messagesLayoutDelegate = self
+        messagesCollectionView.messagesDisplayDelegate = self
+    }
+    
+    private func insertNewMessage(message: MMessage) {
+        guard !messages.contains(message) else { return }
+        messages.append(message)
+        messages.sort()
+        
+        messagesCollectionView.reloadData()
     }
     
     private func configureMessageInputBar() {
@@ -40,7 +60,7 @@ class ChatsViewController: MessagesViewController {
         messageInputBar.inputTextView.backgroundColor = .white
         messageInputBar.inputTextView.placeholderTextColor = #colorLiteral(red: 0.7411764706, green: 0.7411764706, blue: 0.7411764706, alpha: 1)
         messageInputBar.inputTextView.textContainerInset = UIEdgeInsets(top: 14, left: 12, bottom: 14, right: 36)
-        messageInputBar.inputTextView.placeholderLabelInsets = UIEdgeInsets(top: 14, left: 12, bottom: 14, right: 36)
+        messageInputBar.inputTextView.placeholderLabelInsets = UIEdgeInsets(top: 14, left: 18, bottom: 14, right: 36)
         messageInputBar.inputTextView.layer.borderColor = #colorLiteral(red: 0.7411764706, green: 0.7411764706, blue: 0.7411764706, alpha: 0.4033635232)
         messageInputBar.inputTextView.layer.borderWidth = 0.2
         messageInputBar.inputTextView.layer.cornerRadius = 18.0
@@ -85,5 +105,38 @@ extension ChatsViewController: MessagesDataSource {
         return 1
     }
     
+}
+
+extension ChatsViewController: MessagesLayoutDelegate {
+    func footerViewSize(for section: Int, in messagesCollectionView: MessagesCollectionView) -> CGSize {
+        return CGSize(width: 0, height: 8)
+    }
+}
+
+extension ChatsViewController: MessagesDisplayDelegate {
     
+    func backgroundColor(for message: MessageType, at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) -> UIColor {
+        return isFromCurrentSender(message: message) ? .white : #colorLiteral(red: 0.7882352941, green: 0.631372549, blue: 0.9411764706, alpha: 1)
+    }
+    
+    func textColor(for message: MessageType, at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) -> UIColor {
+        return isFromCurrentSender(message: message) ? #colorLiteral(red: 0.2392156863, green: 0.2392156863, blue: 0.2392156863, alpha: 1) : .white
+    }
+    
+    func configureAvatarView(_ avatarView: AvatarView, for message: MessageType, at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) {
+        avatarView.isHidden = true
+    }
+    
+    func messageStyle(for message: MessageType, at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) -> MessageStyle {
+        .bubble
+    }
+    
+}
+
+extension ChatsViewController: InputBarAccessoryViewDelegate {
+    func inputBar(_ inputBar: InputBarAccessoryView, didPressSendButtonWith text: String) {
+        let message = MMessage(user: user, content: text)
+        insertNewMessage(message: message)
+        inputBar.inputTextView.text = ""
+    }
 }

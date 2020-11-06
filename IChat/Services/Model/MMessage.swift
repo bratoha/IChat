@@ -16,6 +16,11 @@ struct MMessage: Hashable {
     var sendDate: Date
     let id: String?
     
+    private struct Sender: SenderType {
+        var senderId: String
+        var displayName: String
+    }
+    
     init(user: MUser, content: String) {
         self.sender = user
         self.sendDate = Date()
@@ -55,6 +60,7 @@ struct MMessage: Hashable {
     }
 }
 
+//MARK: MessageType
 extension MMessage: MessageType {
     
     var messageId: String {
@@ -71,5 +77,12 @@ extension MMessage: MessageType {
     
     static func == (lhs: MMessage, rhs: MMessage) -> Bool {
         return lhs.messageId == rhs.messageId
+    }
+}
+
+// MARK: Comparable
+extension MMessage: Comparable {
+    static func < (lhs: MMessage, rhs: MMessage) -> Bool {
+        lhs.sendDate < rhs.sendDate
     }
 }

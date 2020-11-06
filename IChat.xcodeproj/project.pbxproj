@@ -227,9 +227,9 @@
 				87D5C590252F1208009B5A01 /* PeopleViewController.swift */,
 				875CDADA25501E530090A464 /* ProfileViewController.swift */,
 				875CDADD255026850090A464 /* ChatRequestViewController.swift */,
+				87F6A0C225553EC200F41D41 /* ChatsViewController.swift */,
 				876ED81325470561000CE860 /* Cell */,
 				87D8AC43254829DC0058FF84 /* Header */,
-				87F6A0C225553EC200F41D41 /* ChatsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
