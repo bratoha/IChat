@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class ActiveChatCell: UICollectionViewCell, SelfConfiguringCell {
     
@@ -30,9 +31,9 @@ class ActiveChatCell: UICollectionViewCell, SelfConfiguringCell {
             return
         }
         
-        friendImageView.image = UIImage(named: chat.friendAvatarStringURL)
         friendName.text = chat.friendUsername
         lastMessage.text = chat.lastMessage
+        friendImageView.sd_setImage(with: URL(string: chat.friendAvatarStringURL), completed: nil)
     }
     
     required init?(coder: NSCoder) {
