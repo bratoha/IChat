@@ -9,12 +9,22 @@ import UIKit
 import FirebaseFirestore.FIRQuerySnapshot
 import MessageKit
 
+struct ImageItem: MediaItem {
+    var url: URL?
+    var image: UIImage?
+    var placeholderImage: UIImage
+    var size: CGSize
+}
+
 struct MMessage: Hashable {
     
     let content: String
     var sender: SenderType
     var sendDate: Date
     let id: String?
+    
+    var image: UIImage? = nil
+    var downloadURL: URL? = nil
     
     private struct Sender: SenderType {
         var senderId: String
@@ -28,29 +38,51 @@ struct MMessage: Hashable {
         self.id = nil
     }
     
+    init(user: MUser, image: UIImage) {
+        self.sender = user
+        self.image = image
+        self.content = ""
+        self.sendDate = Date()
+        self.id = nil
+    }
+    
     init?(document: QueryDocumentSnapshot) {
         let data = document.data()
         
         guard let sendDate = data["created"] as? Timestamp,
               let senderId = data["senderID"] as? String,
-              let senderName = data["senderName"] as? String,
-              let content = data["content"] as? String else {
+              let senderName = data["senderName"] as? String
+        else {
             return nil
         }
         
         self.id = document.documentID
         self.sendDate = sendDate.dateValue()
         self.sender = Sender(senderId: senderId, displayName: senderName)
-        self.content = content
+        
+        if let content = data["content"] as? String {
+            self.content = content
+            self.downloadURL = nil
+        } else if let urlString = data["url"] as? String, let url = URL(string: urlString) {
+            self.downloadURL = url
+            self.content = ""
+        } else {
+            return nil
+        }
     }
     
     var representation: [String: Any] {
-        let rep: [String: Any] = [
+        var rep: [String: Any] = [
             "created": sendDate,
             "senderID": sender.senderId,
             "senderName": sender.displayName,
-            "content": content,
         ]
+        
+        if let url = downloadURL {
+            rep["url"] = url.absoluteString
+        } else {
+            rep["content"] = content
+        }
         
         return rep
     }
@@ -68,11 +100,17 @@ extension MMessage: MessageType {
     }
     
     var sentDate: Date {
-        sendDate
+        return sendDate
     }
     
     var kind: MessageKind {
-        .text(content)
+        return image != nil ?
+            .photo(ImageItem(
+                    url: nil,
+                    image: nil,
+                    placeholderImage: image!,
+                    size: image!.size)) :
+            .text(content)
     }
     
     static func == (lhs: MMessage, rhs: MMessage) -> Bool {
