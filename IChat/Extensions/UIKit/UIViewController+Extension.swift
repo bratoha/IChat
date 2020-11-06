@@ -1,5 +1,5 @@
 //
-//  ViewController+Extension.swift
+//  UIViewController+Extension.swift
 //  IChat
 //
 //  Created by Антон Калинин on 27.10.2020.

@@ -1,5 +1,5 @@
 //
-//  Font+Extension.swift
+//  UIFont+Extension.swift
 //  IChat
 //
 //  Created by Антон Калинин on 02.10.2020.

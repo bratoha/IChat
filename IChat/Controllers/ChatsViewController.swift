@@ -8,10 +8,12 @@
 import UIKit
 import MessageKit
 import InputBarAccessoryView
+import FirebaseFirestore.FIRListenerRegistration
 
 class ChatsViewController: MessagesViewController {
     
     private var messages = [MMessage]()
+    private var messageListener: ListenerRegistration?
     
     private let user: MUser
     private let chat: MChat
@@ -22,6 +24,10 @@ class ChatsViewController: MessagesViewController {
         super.init(nibName: nil, bundle: nil)
         
         title = chat.friendUsername
+    }
+    
+    deinit {
+        messageListener?.remove()
     }
     
     required init?(coder: NSCoder) {
@@ -43,6 +49,15 @@ class ChatsViewController: MessagesViewController {
         messagesCollectionView.messagesDataSource = self
         messagesCollectionView.messagesLayoutDelegate = self
         messagesCollectionView.messagesDisplayDelegate = self
+        
+        messageListener = ListenerService.shared.messagesObserve(chat: chat, completion: { (result) in
+            switch result {
+            case .success(let message):
+                self.insertNewMessage(message: message)
+            case .failure(let error):
+                self.showAlert(with: "Ошибка!", and: error.localizedDescription)
+            }
+        })
     }
     
     private func insertNewMessage(message: MMessage) {
@@ -50,8 +65,22 @@ class ChatsViewController: MessagesViewController {
         messages.append(message)
         messages.sort()
         
+        let isLatestMessage = messages.firstIndex(of: message) == (messages.count - 1)
+        let shouldScrollToBottom = messagesCollectionView.isAtBottom && isLatestMessage
+        
         messagesCollectionView.reloadData()
+        
+        if shouldScrollToBottom {
+            DispatchQueue.main.async {
+                self.messagesCollectionView.scrollToBottom(animated: true)
+            }
+        }
     }
+
+}
+
+// MARK: Setup messageInputBar
+extension ChatsViewController {
     
     private func configureMessageInputBar() {
         messageInputBar.isTranslucent = true
@@ -105,14 +134,38 @@ extension ChatsViewController: MessagesDataSource {
         return 1
     }
     
+    func cellTopLabelAttributedText(for message: MessageType, at indexPath: IndexPath) -> NSAttributedString? {
+        if indexPath.item % 4 == 0 {
+            return NSAttributedString(string: MessageKitDateFormatter.shared.string(from: message.sentDate),
+                                      attributes: [
+                                        NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 10),
+                                        NSAttributedString.Key.foregroundColor: UIColor.darkGray,
+                                      ])
+        } else {
+            return nil
+        }
+    }
+    
 }
 
+// MARK: MessagesLayoutDelegate
 extension ChatsViewController: MessagesLayoutDelegate {
+    
     func footerViewSize(for section: Int, in messagesCollectionView: MessagesCollectionView) -> CGSize {
         return CGSize(width: 0, height: 8)
     }
+    
+    func cellTopLabelHeight(for message: MessageType, at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) -> CGFloat {
+        if indexPath.item % 4 == 0 {
+            return 30
+        } else {
+            return 0
+        }
+    }
+    
 }
 
+// MARK: MessagesDisplayDelegate
 extension ChatsViewController: MessagesDisplayDelegate {
     
     func backgroundColor(for message: MessageType, at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) -> UIColor {
@@ -133,10 +186,22 @@ extension ChatsViewController: MessagesDisplayDelegate {
     
 }
 
+// MARK: InputBarAccessoryViewDelegate
 extension ChatsViewController: InputBarAccessoryViewDelegate {
     func inputBar(_ inputBar: InputBarAccessoryView, didPressSendButtonWith text: String) {
         let message = MMessage(user: user, content: text)
-        insertNewMessage(message: message)
+        
+        FirestoreService.shared.sendMessage(chat: chat, message: message) { (result) in
+            switch result {
+            case .success():
+                DispatchQueue.main.async {
+                    self.messagesCollectionView.scrollToBottom(animated: true)
+                }
+            case .failure(let error):
+                self.showAlert(with: "Ошибка!", and: error.localizedDescription)
+            }
+        }
+        
         inputBar.inputTextView.text = ""
     }
 }

@@ -1,5 +1,5 @@
 //
-//  Button+Extension.swift
+//  UIButton+Extension.swift
 //  IChat
 //
 //  Created by Антон Калинин on 02.10.2020.

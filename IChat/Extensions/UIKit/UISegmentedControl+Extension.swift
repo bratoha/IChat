@@ -1,5 +1,5 @@
 //
-//  SegmentedControl+Extension.swift
+//  UISegmentedControl+Extension.swift
 //  IChat
 //
 //  Created by Антон Калинин on 07.10.2020.
