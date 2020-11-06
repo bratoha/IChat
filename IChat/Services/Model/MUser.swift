@@ -7,6 +7,7 @@
 
 import Foundation
 import FirebaseFirestore
+import MessageKit
 
 struct MUser: Hashable, Decodable {
     var username: String
@@ -80,5 +81,15 @@ struct MUser: Hashable, Decodable {
         if filter.isEmpty { return true }
         let lowercasedFilter = filter.lowercased()
         return username.lowercased().contains(lowercasedFilter)
+    }
+}
+
+extension MUser: SenderType {
+    var senderId: String {
+        self.id
+    }
+    
+    var displayName: String {
+        self.username
     }
 }

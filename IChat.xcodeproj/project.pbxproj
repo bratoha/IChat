@@ -59,6 +59,7 @@
 		87EB3F082512370D001BB298 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EB3F072512370D001BB298 /* AuthViewController.swift */; };
 		87EB3F0D2512370E001BB298 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87EB3F0C2512370E001BB298 /* Assets.xcassets */; };
 		87EB3F102512370E001BB298 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87EB3F0E2512370E001BB298 /* LaunchScreen.storyboard */; };
+		87F6A0C325553EC200F41D41 /* ChatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F6A0C225553EC200F41D41 /* ChatsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -115,6 +116,7 @@
 		87EB3F0C2512370E001BB298 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		87EB3F0F2512370E001BB298 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		87EB3F112512370E001BB298 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		87F6A0C225553EC200F41D41 /* ChatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsViewController.swift; sourceTree = "<group>"; };
 		9FB376B04563C8AC71768764 /* Pods-IChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IChat.debug.xcconfig"; path = "Target Support Files/Pods-IChat/Pods-IChat.debug.xcconfig"; sourceTree = "<group>"; };
 		A5A2058C3C012FEF40E45C0B /* Pods_IChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2EE698770982AC219738853 /* Pods-IChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IChat.release.xcconfig"; path = "Target Support Files/Pods-IChat/Pods-IChat.release.xcconfig"; sourceTree = "<group>"; };
@@ -227,6 +229,7 @@
 				875CDADD255026850090A464 /* ChatRequestViewController.swift */,
 				876ED81325470561000CE860 /* Cell */,
 				87D8AC43254829DC0058FF84 /* Header */,
+				87F6A0C225553EC200F41D41 /* ChatsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -469,6 +472,7 @@
 				87CD3A5B252DEC27001275E8 /* AddPhotoView.swift in Sources */,
 				8728D3D02553E19100C67BBB /* UserError.swift in Sources */,
 				875CDAD725501C830090A464 /* UIView+Extension.swift in Sources */,
+				87F6A0C325553EC200F41D41 /* ChatsViewController.swift in Sources */,
 				8773467F2527457100A11276 /* ButtonFormView.swift in Sources */,
 				8773467525272D0600A11276 /* Label+Extension.swift in Sources */,
 				8781F45825540C8C00D97F97 /* StorageService.swift in Sources */,
